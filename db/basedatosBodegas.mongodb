@@ -1,0 +1,40 @@
+use("Bodegas");
+
+db.bodegas.insertMany([
+    {"id": 11,"nombre": "bodega0","id_responsable": 16,"estado": 1,"created_by": 16,"created_at": ISODate("2022-06-02T15:33:48Z"),},
+    {"id": 12,"nombre": "bodega1","id_responsable": 18,"estado": 1,"created_by": 18,"created_at": ISODate("2022-06-02T15:33:48Z"),},
+    {"id": 13,"nombre": "bodega2","id_responsable": 18,"estado": 1,"created_by": 18,"created_at": ISODate("2022-06-02T15:33:48Z"),},
+    {"id": 18,"nombre": "bodega7","id_responsable": 17,"estado": 1,"created_by": 17,"created_at": ISODate("2022-06-02T15:33:48Z"),},
+    {"id": 19,"nombre": "bodega8","id_responsable": 11,"estado": 1,"created_by": 11,"created_at": ISODate("2022-06-02T15:33:48Z"),},
+    {"id": 20,"nombre": "bodega9","id_responsable": 18,"estado": 1,"created_by": 18,"created_at": ISODate("2022-06-02T15:33:48Z"),},
+    {"id": 22,"nombre": "jsjsjss","id_responsable": 13,"estado": 1,"created_at": ISODate("2022-06-02T21:30:47Z"),"updated_at": ISODate("2022-06-02T21:30:47Z")},
+    {"id": 23,"nombre": "leeche","id_responsable": 13,"estado": 1,"created_at": ISODate("2022-06-02T21:43:08Z"),"updated_at": ISODate("2022-06-02T21:43:08Z")},
+    {"id": 24,"nombre": "soto1","id_responsable": 15,"estado": 1,"created_at": ISODate("2022-06-02T21:46:40Z"),"updated_at": ISODate("2022-06-02T21:46:40Z")},
+    {"id": 25,"nombre": "soto2","id_responsable": 15,"estado": 1,"created_at": ISODate("2022-06-02T21:47:29Z"),"updated_at": ISODate("2022-06-02T21:47:29Z")},
+    {"id": 26,"nombre": "prueba","id_responsable": 12,"estado": 1,"created_at": ISODate("2022-06-02T21:47:48Z"),"updated_at": ISODate("2022-06-02T21:47:48Z")},
+    {"id": 27,"nombre": "fsfdf","id_responsable": 13,"estado": 1,"created_at": ISODate("2022-06-02T21:48:00Z"),"updated_at": ISODate("2022-06-02T21:48:00Z")},
+    {"id": 28,"nombre": "prueba","id_responsable": 12,"estado": 1,"created_at": ISODate("2022-06-03T00:10:32Z"),"updated_at": ISODate("2022-06-03T00:10:32Z")},
+    {"id": 29,"nombre": "bodegajuanpablo","id_responsable": 19,"estado": 1,"created_at": ISODate("2022-06-03T00:41:51Z"),"updated_at": ISODate("2022-06-03T00:41:51Z")},
+    {"id": 30,"nombre": "micasa","id_responsable": 20,"estado": 1,"created_at": ISODate("2022-06-03T00:42:29Z"),"updated_at": ISODate("2022-06-03T00:42:29Z")}
+  ]);
+  
+  db.historiales.insertMany([
+    {"id": 18,"cantidad": 7,"id_bodega_origen": 12,"id_bodega_destino": 18,"id_inventario": 18,"created_by": 18},
+    {"id": 19,"cantidad": 4,"id_bodega_origen": 11,"id_bodega_destino": 12,"id_inventario": 11,"created_by": 11}
+  ]);
+  
+  db.inventarios.insertMany([
+    {"id": 11,"id_bodega": 11,"id_producto": 11,"cantidad": 100,"created_by": 11,"updated_at": ISODate("2023-05-26T01:35:52Z")},
+    {"id": 12,"id_bodega": 12,"id_producto": 18,"cantidad": 103,"created_by": 11,"updated_at": ISODate("2023-05-26T01:35:52Z")}
+  ]);
+  
+  db.productos.insertMany([
+    {"id": 11,"nombre": "producto0","descripcion": "producto0","estado": 1,"created_by": 16,},
+    {"id": 12,"nombre": "producto1","descripcion": "producto1","estado": 1,"created_by": 16,}
+  ]);
+  
+  db.users.insertMany([
+    {"id": 11,"nombre": "juan0","email": "juan0@hotmail.com","estado": 1,"password": "12345",},
+    {"id": 12,"nombre": "maria","email": "maria@hotmail.com","estado": 1,"password": "54321",}
+  ]);
+  
