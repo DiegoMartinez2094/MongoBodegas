@@ -17,14 +17,21 @@ appBodegas.get("/", limitGrt(),appMiddlewareCampusVerify, async(req, res) => {
     res.send(result); });
 
     appBodegas.post("/", limitGrt(), appMiddlewareCampusVerify, appDTOData, async(req, res) => {
+        // Datos de entrada : {
+        //     "id":,
+        //     "nombre":,
+        //     "id_responsable":,
+        //     "estado":,
+        //     "created_by":,
+        //     "created_at":
+        //   }
     let resul;
-    try {
+    try { 
         resul = await Bodegas.insertOne(req.body);
         res.status(201).send(resul);
     } catch (error) {
         console.log(error.errInfo.details.schemaRulesNotSatisfied[0]);
         res.send();
-       
     }
 });     
 export default appBodegas; 
