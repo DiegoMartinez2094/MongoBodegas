@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 import express from "express";
 import appBodegas from "./routers/Bodegas.js";
+import { appToken, appVerify } from "./limit/token.js";
 
 dotenv.config();
 let app = express();
@@ -13,4 +14,7 @@ app.listen(config, ()=>{
     console.log(`http://${config.hostname}:${config.port}`);
 });
 
-app.use("/Bodegas",appBodegas);
+
+app.use("/token", appToken);
+
+app.use("/Bodegas",appVerify,appBodegas);
