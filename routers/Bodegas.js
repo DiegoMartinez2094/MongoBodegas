@@ -3,6 +3,7 @@ import {Router} from "express";
 import { limitGrt } from "../limit/config.js";
 import {appMiddlewareCampusVerify, appDTOData} from "../middleware/Bodegas.js";
 import { ObjectId } from "mongodb";
+import { bodega } from "./storage/Bodegas.js";
 
 const appBodegas =Router();
 
@@ -15,5 +16,15 @@ appBodegas.get("/", limitGrt(),appMiddlewareCampusVerify, async(req, res) => {
     let result = await Bodegas.find().sort({ nombre: 1 }).toArray();
     res.send(result); });
 
-     
+    appBodegas.post("/", limitGrt(), appMiddlewareCampusVerify, appDTOData, async(req, res) => {
+    let resul;
+    try {
+        resul = await Bodegas.insertOne(req.body);
+        res.status(201).send(resul);
+    } catch (error) {
+        console.log(error.errInfo.details.schemaRulesNotSatisfied[0]);
+        res.send();
+       
+    }
+});     
 export default appBodegas; 
