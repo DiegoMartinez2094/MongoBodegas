@@ -12,7 +12,8 @@ let Bodegas = db.collection('bodegas');
 appBodegas.get("/", limitGrt(),appMiddlewareCampusVerify, async(req, res) => { 
     let db = await con();
     let Bodegas = db.collection('bodegas');
-    let result = await Bodegas.find().toArray();
+    let result = await Bodegas.find().sort({ nombre: 1 }).toArray();
     res.send(result); });
+
      
 export default appBodegas; 
