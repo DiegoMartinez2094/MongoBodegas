@@ -65,3 +65,21 @@ esta candidad la podemos variar en el archivo limit/config.js en el parametro "w
 Ejemplos de endpoint:
 
 (recuerde que para cada tabla debemos generar token)
+
+Listar bodegas ordenadas alfabéticamente = http://127.10.10.10:5011/bodegas  (metodo get)
+
+Crear una nueva bodega=http://127.10.10.10:5011/bodegas (metodo post)
+
+ejemplo poner en el body:
+    "id": 12,
+    "nombre": "Almacén Central",
+    "id_responsable": 18,
+    "estado": 1,
+    "created_by": 18,
+    "created_at": "2022-06-02T00:00:00.000Z"
+
+Listar productos en orden descendente por el campo "Total" = http://127.10.10.10:5011/productos (metodo get)
+
+Insertar un nuevo producto con una cantidad inicial en la tabla inventarios=http://127.10.10.10:5011/productos (metodo post)
+
+Insertar registros en la tabla de inventarios=http://127.10.10.10:5011/inventarios(metodo post)
