@@ -5,6 +5,7 @@ import {Router} from 'express';
 import { SignJWT, jwtVerify } from 'jose';
 import {bodega} from "../routers/storage/Bodegas.js";
 import {productos} from "../routers/storage/productos.js";
+import {inventarios} from "../routers/storage/Inventarios.js";
 
 dotenv.config("../");
 const appToken = Router();
@@ -13,7 +14,8 @@ const appVerify = Router();
 const createInstance = (className) => {
     const classMap = {
       'bodegas': bodega, //entre comillas es el nombre de la coleccion que vamos a implementar el token
-      'productos': productos, 
+      'productos': productos,
+      'inventarios': inventarios
     };
     const Class = classMap[className];
     return (Class) ? plainToClass(Class, {}, { ignoreDecorators: true }) : undefined;
