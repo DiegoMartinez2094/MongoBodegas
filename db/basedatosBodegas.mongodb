@@ -1,7 +1,5 @@
-use("Bodegas");
-use("mongoBodegas");
 
-use("mongoBodegas");
+use("Bodegas");
 db.users.insertMany([
     {
         id: 11,
@@ -75,7 +73,7 @@ db.users.insertMany([
     }
 ]);
 
-use("mongoBodegas")
+use("Bodegas")
 db.bodegas.insertMany([
     {
         id: 11,
@@ -319,7 +317,7 @@ db.bodegas.insertMany([
     }
 ]);
 
-use("mongoBodegas");
+use("Bodegas");
 db.productos.insertMany([
     {
         id: 11,
@@ -393,7 +391,7 @@ db.productos.insertMany([
     }
 ]);
 
-use("mongoBodegas");
+use("Bodegas");
 db.inventarios.insertMany([
     {
         id: 12,
@@ -513,7 +511,7 @@ db.inventarios.insertMany([
     }
 ]);
 
-use("mongoBodegas");
+use("Bodegas");
 db.historiales.insertMany([
     {
 
